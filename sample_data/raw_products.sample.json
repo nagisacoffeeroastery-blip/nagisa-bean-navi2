@@ -1,0 +1,17 @@
+{
+  "source_url": "https://example.com/square-shop",
+  "products": [
+    {
+      "name": "ブラジル No.2",
+      "description": "チョコレートのような甘み。酸味は穏やかです。",
+      "price": 980,
+      "image_url": "https://example.com/images/brazil.jpg",
+      "product_url": "https://example.com/product/brazil-no2",
+      "category": "シングルオリジン",
+      "available": true,
+      "tags": ["チョコ", "甘み"],
+      "options": ["豆", "粉"],
+      "source": "square"
+    }
+  ]
+}

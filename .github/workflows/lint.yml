@@ -1,0 +1,43 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check JavaScript syntax
+        run: node --check app.js
+
+      - name: Check Python syntax
+        run: python -m py_compile crawler/crawl_products.py crawler/normalize_products.py scripts/validate_products.py scripts/validate_static.py
+
+      - name: Check JSON syntax
+        run: |
+          python -m json.tool products.json > /tmp/products.json
+          python -m json.tool raw_products.json > /tmp/raw_products.json
+          python -m json.tool sample_data/raw_products.sample.json > /tmp/raw_products.sample.json
+
+      - name: Validate static app
+        run: python scripts/validate_static.py
+
+      - name: Validate product database
+        run: python scripts/validate_products.py

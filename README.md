@@ -63,6 +63,18 @@ GitHubへpushまたはPull Request作成時は、`.github/workflows/lint.yml`で
 
 ## GitHub Pages公開方法
 
+公開済みURL:
+
+```txt
+https://nagisacoffeeroastery-blip.github.io/nagisa-bean-navi2/
+```
+
+GitHubリポジトリ:
+
+```txt
+https://github.com/nagisacoffeeroastery-blip/nagisa-bean-navi2
+```
+
 1. GitHubにリポジトリを作成します。
 2. このディレクトリをpushします。
 3. GitHubの`Settings > Pages`を開きます。

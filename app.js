@@ -288,16 +288,31 @@ function recommendProducts(products, answers) {
  * @returns {Array<object>}
  */
 function getEligibleProducts(products, answers) {
+  if (answers.type === "ドリップバッグ") {
+    const dripBagProducts = products.filter((product) => productMatches(product, "ドリップバッグ"));
+    return filterByRoast(dripBagProducts.length > 0 ? dripBagProducts : products, answers);
+  }
+
   const caffeineMatchedProducts = decafOnlySelected(answers)
     ? products.filter((product) => product.decaf)
     : products;
 
+  return filterByRoast(caffeineMatchedProducts, answers);
+}
+
+/**
+ * Narrows products to the selected roast family.
+ * @param {Array<object>} products
+ * @param {Record<string, string>} answers
+ * @returns {Array<object>}
+ */
+function filterByRoast(products, answers) {
   if (!answers.roast || answers.roast === "おまかせ") {
-    return caffeineMatchedProducts;
+    return products;
   }
 
-  const roastMatchedProducts = caffeineMatchedProducts.filter((product) => roastMatches(product.roast, answers.roast));
-  return roastMatchedProducts.length > 0 ? roastMatchedProducts : caffeineMatchedProducts;
+  const roastMatchedProducts = products.filter((product) => roastMatches(product.roast, answers.roast));
+  return roastMatchedProducts.length > 0 ? roastMatchedProducts : products;
 }
 
 /**

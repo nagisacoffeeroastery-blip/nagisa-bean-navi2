@@ -78,6 +78,7 @@ def validate_app(path: Path) -> list[str]:
         "function scoreProduct(",
         "function recommendProducts(",
         "function getRecommendableProducts(",
+        "function decafOnlySelected(",
         "なにをお探しですか？",
         "浅煎り",
         "中深煎り",

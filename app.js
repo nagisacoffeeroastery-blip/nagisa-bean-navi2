@@ -288,12 +288,25 @@ function recommendProducts(products, answers) {
  * @returns {Array<object>}
  */
 function getEligibleProducts(products, answers) {
+  const caffeineMatchedProducts = decafOnlySelected(answers)
+    ? products.filter((product) => product.decaf)
+    : products;
+
   if (!answers.roast || answers.roast === "おまかせ") {
-    return products;
+    return caffeineMatchedProducts;
   }
 
-  const roastMatchedProducts = products.filter((product) => roastMatches(product.roast, answers.roast));
-  return roastMatchedProducts.length > 0 ? roastMatchedProducts : products;
+  const roastMatchedProducts = caffeineMatchedProducts.filter((product) => roastMatches(product.roast, answers.roast));
+  return roastMatchedProducts.length > 0 ? roastMatchedProducts : caffeineMatchedProducts;
+}
+
+/**
+ * Returns whether the user explicitly selected decaf.
+ * @param {Record<string, string>} answers
+ * @returns {boolean}
+ */
+function decafOnlySelected(answers) {
+  return answers.caffeine === "デカフェがいい";
 }
 
 /**

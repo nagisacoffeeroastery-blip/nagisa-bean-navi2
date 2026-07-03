@@ -37,6 +37,12 @@ REQUIRED_FIELDS = {
 }
 LEVEL_FIELDS = ["acid_level", "body_level", "sweetness_level", "bitter_level"]
 ROASTS = {"Light", "Cinnamon", "Medium", "High", "City", "Full City", "French", "Italian"}
+DECAF_PRODUCT_NAMES = {
+    "ホンジュラス　デカフェ JASオーガニック",
+    "夜凪ブレンド30",
+    "夜凪ブレンド50",
+    "夜凪ブレンド70",
+}
 
 
 def main() -> int:
@@ -113,6 +119,8 @@ def validate_products(path: Path) -> list[str]:
             errors.append(f"{product_label}: workshop products must have workshop=true.")
         if "定期便" in str(product.get("name", "")) and product.get("subscription") is not True:
             errors.append(f"{product_label}: subscription products must have subscription=true.")
+        if product.get("decaf") is not (product.get("name") in DECAF_PRODUCT_NAMES):
+            errors.append(f"{product_label}: decaf must be true only for the approved decaf products.")
 
     if not products:
         errors.append("products must contain at least one item.")

@@ -179,8 +179,7 @@ def infer_roast(name: str, description: str, tags: list[str]) -> str:
 def infer_decaf(name: str, description: str, tags: list[str]) -> bool:
     """Infer decaf status."""
 
-    text = " ".join([name, description, *tags]).lower()
-    return "デカフェ" in text or "decaf" in text or "カフェインレス" in text
+    return ("ホンジュラス" in name and "デカフェ" in name) or "夜凪ブレンド" in name
 
 
 def infer_workshop(name: str, description: str) -> bool:

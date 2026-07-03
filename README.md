@@ -112,7 +112,7 @@ https://github.com/nagisacoffeeroastery-blip/nagisa-bean-navi2
 - `recommend_enabled`
 - `available`
 
-`recommend_enabled`が`false`の商品、または`available`が`false`の商品は診断結果から除外されます。
+`recommend_enabled`が`false`の商品、または`available`が`false`の商品は診断結果から除外されます。デカフェを選んだ場合は、`decaf`が`true`の商品だけを厳格に候補にします。
 
 ## JSON編集方法
 
@@ -180,7 +180,7 @@ python3 crawler/normalize_products.py
 - `body_level`: 1から5で推定
 - `sweetness_level`: 1から5で推定
 - `bitter_level`: 1から5で推定
-- `decaf`: 商品名、説明、タグから推定
+- `decaf`: ホンジュラス デカフェ、夜凪ブレンド30/50/70のみ`true`
 - `seasonal`: 季節限定、さくらブレンド、アイスブレンドなどを推定
 - `priority`: お店側のおすすめ優先度
 - `workshop`: ワークショップ商品かを推定

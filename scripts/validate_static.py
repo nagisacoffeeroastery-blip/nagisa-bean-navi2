@@ -36,7 +36,7 @@ def validate_index(path: Path) -> list[str]:
     required_snippets = [
         '<meta name="viewport"',
         '<link rel="stylesheet" href="./style.css">',
-        '<script type="module" src="./app.js"></script>',
+        '<script type="module" src="./app.js?v=',
         'id="start-button"',
         'id="quiz-panel"',
         'id="result-list"',

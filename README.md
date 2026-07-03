@@ -112,7 +112,7 @@ https://github.com/nagisacoffeeroastery-blip/nagisa-bean-navi2
 - `recommend_enabled`
 - `available`
 
-`recommend_enabled`が`false`の商品、または`available`が`false`の商品は診断結果から除外されます。デカフェを選んだ場合は、`decaf`が`true`の商品だけを厳格に候補にします。
+`recommend_enabled`が`false`の商品、または`available`が`false`の商品は診断結果から除外されます。デカフェを選んだ場合は、`decaf`が`true`の商品だけを厳格に候補にします。ただし、ドリップバッグを探している場合は、購入時にデカフェを選択できるためドリップバッグを優先します。
 
 ## JSON編集方法
 

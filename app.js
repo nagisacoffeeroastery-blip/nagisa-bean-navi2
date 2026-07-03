@@ -306,7 +306,7 @@ function getEligibleProducts(products, answers) {
  * @returns {boolean}
  */
 function decafOnlySelected(answers) {
-  return answers.caffeine === "デカフェがいい";
+  return answers.caffeine === "デカフェがいい" && answers.type !== "ドリップバッグ";
 }
 
 /**

@@ -60,17 +60,11 @@ a {
   gap: 16px;
 }
 
-.brand-mark {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: var(--paper-strong);
-  background: var(--green);
-  font-family: Georgia, serif;
-  font-size: 30px;
-  box-shadow: var(--shadow);
+.brand-logo {
+  width: min(78vw, 360px);
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
 
 .eyebrow {

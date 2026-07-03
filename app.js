@@ -3,9 +3,24 @@ const MAX_RESULTS = 3;
 
 const questions = [
   {
+    id: "type",
+    title: "なにをお探しですか？",
+    answers: ["コーヒー豆", "ドリップバッグ", "定期便", "ワークショップ"],
+  },
+  {
+    id: "purpose",
+    title: "どんな目的で選びますか？",
+    answers: ["自宅", "ギフト", "初めて", "いつもと違うもの"],
+  },
+  {
+    id: "mood",
+    title: "どんな出会いがいいですか？",
+    answers: ["定番人気", "ちょっと個性的", "季節限定", "おまかせ"],
+  },
+  {
     id: "taste",
     title: "どんな味が好きですか？",
-    answers: ["すっきり", "コク", "甘み", "苦味"],
+    answers: ["すっきり", "コク", "甘み", "苦味", "フルーティ"],
   },
   {
     id: "acid",
@@ -15,33 +30,50 @@ const questions = [
   {
     id: "drink",
     title: "飲み方",
-    answers: ["ブラック", "ミルク", "アイス", "デカフェ"],
+    answers: ["ブラック", "ミルク", "アイス", "どれでも"],
+  },
+  {
+    id: "caffeine",
+    title: "カフェインは気にしますか？",
+    answers: ["気にしない", "デカフェがいい", "夜にも飲みたい", "半分くらい控えたい"],
   },
   {
     id: "roast",
     title: "焙煎度",
-    answers: ["浅煎り", "中煎り", "深煎り", "おまかせ"],
-  },
-  {
-    id: "purpose",
-    title: "用途",
-    answers: ["自宅", "ギフト", "初めて", "いつもと違う豆"],
-  },
-  {
-    id: "format",
-    title: "探しているのはドリップバッグですか？",
-    answers: ["はい", "いいえ", "どちらでも"],
+    answers: [
+      "おまかせ",
+      "1: LIGHT ROAST",
+      "2: CINNAMON ROAST",
+      "3: MEDIUM ROAST",
+      "4: HIGH ROAST",
+      "5: CITY ROAST",
+      "6: FULLCITY ROAST",
+      "7: FRENCH ROAST",
+      "8: ITALIAN ROAST",
+    ],
   },
 ];
 
 const roastLabels = new Map([
-  ["Light", "浅煎り"],
-  ["Medium", "中煎り"],
-  ["High", "中煎り"],
-  ["City", "中深煎り"],
-  ["Full City", "深煎り"],
-  ["French", "深煎り"],
-  ["Italian", "深煎り"],
+  ["Light", "1: LIGHT ROAST"],
+  ["Cinnamon", "2: CINNAMON ROAST"],
+  ["Medium", "3: MEDIUM ROAST"],
+  ["High", "4: HIGH ROAST"],
+  ["City", "5: CITY ROAST"],
+  ["Full City", "6: FULLCITY ROAST"],
+  ["French", "7: FRENCH ROAST"],
+  ["Italian", "8: ITALIAN ROAST"],
+]);
+
+const roastLevels = new Map([
+  ["Light", 1],
+  ["Cinnamon", 2],
+  ["Medium", 3],
+  ["High", 4],
+  ["City", 5],
+  ["Full City", 6],
+  ["French", 7],
+  ["Italian", 8],
 ]);
 
 const state = {
@@ -103,14 +135,35 @@ function scoreProduct(product, answers) {
   const tags = product.flavor_tags ?? [];
   const recommendedFor = product.recommended_for ?? [];
   const isDripBag = productMatches(product, "ドリップバッグ");
+  const isBean = !isDripBag && !product.workshop && !product.subscription;
 
-  if (answers.format === "はい") {
-    score += isDripBag ? 80 : -40;
+  if (answers.type === "コーヒー豆") {
+    score += isBean ? 60 : -40;
+  }
+  if (answers.type === "ドリップバッグ") {
+    score += isDripBag ? 85 : -45;
     addReason(reasons, isDripBag ? "手軽に楽しめるドリップバッグを優先しました。" : "");
   }
+  if (answers.type === "定期便") {
+    score += product.subscription ? 90 : -45;
+    addReason(reasons, product.subscription ? "定期便として続けやすい商品を優先しました。" : "");
+  }
+  if (answers.type === "ワークショップ") {
+    score += product.workshop ? 95 : -55;
+    addReason(reasons, product.workshop ? "コーヒーを体験しながら学べるワークショップです。" : "");
+  }
 
-  if (answers.format === "いいえ") {
-    score += isDripBag ? -25 : 6;
+  if (answers.mood === "定番人気") {
+    score += salesScore(product) * 0.18;
+    score += product.priority ? product.priority * 0.06 : 0;
+    addReason(reasons, "定番人気と選びやすさを加味しました。");
+  }
+  if (answers.mood === "ちょっと個性的") {
+    score += tags.some((tag) => ["⭐️個性派・スペシャル", "華やか", "果実感"].includes(tag)) ? 14 : 0;
+  }
+  if (answers.mood === "季節限定") {
+    score += product.seasonal ? 32 : -6;
+    addReason(reasons, product.seasonal ? "季節限定の商品を優先しました。" : "");
   }
 
   if (answers.taste === "すっきり") {
@@ -132,6 +185,12 @@ function scoreProduct(product, answers) {
   if (answers.taste === "苦味") {
     score += scoreByHighValue(product.bitter_level, 5);
     if (tags.includes("苦味")) score += 3;
+  }
+
+  if (answers.taste === "フルーティ") {
+    score += scoreByHighValue(product.acid_level, 3);
+    score += scoreByHighValue(product.sweetness_level, 3);
+    if (tags.includes("果実感") || tags.includes("華やか")) score += 8;
   }
 
   if (answers.acid === "好き") {
@@ -168,9 +227,25 @@ function scoreProduct(product, answers) {
     addReason(reasons, "アイスでも輪郭が出やすい味わいです。");
   }
 
-  if (answers.drink === "デカフェ") {
-    score += product.decaf ? 50 : -30;
-    addReason(reasons, product.decaf ? "デカフェ希望を最優先しました。" : "");
+  if (answers.drink === "どれでも") {
+    score += 2;
+  }
+
+  if (answers.caffeine === "デカフェがいい") {
+    score += product.decaf ? 55 : -35;
+    addReason(reasons, product.decaf ? "デカフェ希望を優先しました。" : "");
+  }
+
+  if (answers.caffeine === "夜にも飲みたい") {
+    score += product.decaf ? 35 : 0;
+    score += productMatches(product, "夜") ? 18 : 0;
+    addReason(reasons, product.decaf || productMatches(product, "夜") ? "夜にも選びやすいカフェイン控えめの商品です。" : "");
+  }
+
+  if (answers.caffeine === "半分くらい控えたい") {
+    score += productMatches(product, "デカフェ比率 50") ? 38 : 0;
+    score += productMatches(product, "デカフェ比率 30") ? 24 : 0;
+    score += product.decaf ? 10 : 0;
   }
 
   if (answers.roast !== "おまかせ") {
@@ -181,8 +256,14 @@ function scoreProduct(product, answers) {
 
   if (answers.purpose) {
     score += recommendedFor.includes(answers.purpose) ? 5 : 0;
+    if (answers.purpose === "いつもと違うもの") {
+      score += product.seasonal ? 10 : 0;
+      score += tags.includes("⭐️個性派・スペシャル") ? 12 : 0;
+    }
     if (answers.purpose === "ギフト" && isDripBag) score += 12;
   }
+
+  score += priorityScore(product);
 
   return { score, reasons: reasons.filter(Boolean) };
 }
@@ -199,8 +280,24 @@ function recommendProducts(products, answers) {
       const result = scoreProduct(product, answers);
       return { ...product, score: result.score, reasons: result.reasons };
     })
-    .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name, "ja"))
+    .sort(compareProducts)
     .slice(0, MAX_RESULTS);
+}
+
+/**
+ * Sorts recommendations by diagnosis fit, shop priority, and sales signal.
+ * @param {object} a
+ * @param {object} b
+ * @returns {number}
+ */
+function compareProducts(a, b) {
+  return (
+    b.score - a.score
+    || (b.priority ?? 0) - (a.priority ?? 0)
+    || salesScore(b) - salesScore(a)
+    || salesRank(a) - salesRank(b)
+    || a.name.localeCompare(b.name, "ja")
+  );
 }
 
 /**
@@ -213,6 +310,33 @@ function productMatches(product, keyword) {
   return [product.name, product.category, product.description, ...(product.flavor_tags ?? []), ...(product.recommended_for ?? [])]
     .filter(Boolean)
     .some((value) => String(value).includes(keyword));
+}
+
+/**
+ * Converts store priority into a modest score bonus.
+ * @param {object} product
+ * @returns {number}
+ */
+function priorityScore(product) {
+  return Number.isFinite(product.priority) ? product.priority * 0.04 : 0;
+}
+
+/**
+ * Returns a normalized sales score.
+ * @param {object} product
+ * @returns {number}
+ */
+function salesScore(product) {
+  return Number.isFinite(product.sales_score) ? product.sales_score : 0;
+}
+
+/**
+ * Returns sales rank, with unrated items sorted after ranked items.
+ * @param {object} product
+ * @returns {number}
+ */
+function salesRank(product) {
+  return Number.isFinite(product.sales_rank) ? product.sales_rank : Number.MAX_SAFE_INTEGER;
 }
 
 /**
@@ -262,7 +386,7 @@ function addReason(reasons, reason) {
  * @returns {boolean}
  */
 function isDarkRoast(roast) {
-  return ["Full City", "French", "Italian"].includes(roast);
+  return roastLevel(roast) >= 6;
 }
 
 /**
@@ -272,11 +396,18 @@ function isDarkRoast(roast) {
  * @returns {boolean}
  */
 function roastMatches(roast, answer) {
-  const label = roastLabels.get(roast) ?? roast;
-  if (answer === "中煎り") {
-    return ["中煎り", "中深煎り"].includes(label);
-  }
-  return label === answer;
+  const answerLevel = Number.parseInt(answer, 10);
+  if (!Number.isFinite(answerLevel)) return false;
+  return roastLevel(roast) === answerLevel;
+}
+
+/**
+ * Returns a roast level from 1 to 8.
+ * @param {string} roast
+ * @returns {number}
+ */
+function roastLevel(roast) {
+  return roastLevels.get(roast) ?? 5;
 }
 
 /**

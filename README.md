@@ -1,12 +1,12 @@
 # Nagisa Bean Navi 2
 
-LINE公式アカウントのリッチメニューから使う、なぎさ珈琲焙煎所の「豆診断」静的Webアプリです。
+LINE公式アカウントのリッチメニューから使う、なぎさ珈琲焙煎所の「豆なび」静的Webアプリです。
 
 ## 現在の実装範囲
 
 - GitHub Pagesで公開できるHTML/CSS/JavaScript構成
 - `products.json`を唯一のマスターデータとして読み込み
-- 6問のステップ形式診断
+- 8問のステップ形式診断
 - 回答に応じたスコアリング
 - おすすめ上位3商品の表示
 - Square商品ページへの導線
@@ -80,7 +80,7 @@ https://github.com/nagisacoffeeroastery-blip/nagisa-bean-navi2
 3. GitHubの`Settings > Pages`を開きます。
 4. Sourceを`Deploy from a branch`にします。
 5. Branchを`main`、Folderを`/root`にします。
-6. 表示された公開URLをLINEリッチメニューの「豆診断」に設定します。
+6. 表示された公開URLをLINEリッチメニューの「豆なび」に設定します。
 
 ## 商品追加方法
 
@@ -96,6 +96,12 @@ https://github.com/nagisacoffeeroastery-blip/nagisa-bean-navi2
 - `price`
 - `image_url`
 - `square_url`
+- `seasonal`
+- `priority`
+- `workshop`
+- `subscription`
+- `sales_rank`
+- `sales_score`
 - `flavor_tags`
 - `acid_level`
 - `body_level`
@@ -117,7 +123,7 @@ https://github.com/nagisacoffeeroastery-blip/nagisa-bean-navi2
 - `sweetness_level`: 甘み
 - `bitter_level`: 苦味
 
-未設定の商品は後続Phaseの正規化処理で`null`とTODOを付与する想定です。現在の診断では`null`の項目は加点されません。
+`priority`はお店側が推したい優先度、`sales_rank`と`sales_score`はSquareオンラインと実店舗を合算した売れ筋指標です。初期値は正規化スクリプトが推定し、未確認の商品には`todo`を残します。
 
 ## Square URL更新方法
 
@@ -139,7 +145,7 @@ https://github.com/nagisacoffeeroastery-blip/nagisa-bean-navi2
 
 質問文や選択肢は`questions`配列で管理しています。
 
-現在は「探しているのはドリップバッグですか？」の質問で、ドリップバッグ希望の場合にドリップバッグアソートBOXを強く優先します。
+現在は1問目の「なにをお探しですか？」で、コーヒー豆、ドリップバッグ、定期便、ワークショップを分岐します。焙煎度はLIGHT ROASTからITALIAN ROASTまでの8段階で選択できます。
 
 ## クローラー実行方法
 
@@ -159,7 +165,7 @@ python3 crawler/normalize_products.py
 
 `crawl_products.py`は`raw_products.json`を出力します。Square Onlineの公開ストアAPI、JSON-LD、OpenGraph、商品リンクを順に利用して取得します。
 
-`normalize_products.py`は`raw_products.json`を`products.json`形式へ変換します。ワークショップ、送料、ギフトボックスなど診断対象外の商品は`recommend_enabled=false`にします。ドリップバッグアソートBOXは診断対象として扱います。
+`normalize_products.py`は`raw_products.json`を`products.json`形式へ変換します。送料、ギフトボックスなど診断対象外の商品は`recommend_enabled=false`にします。ドリップバッグアソートBOXとワークショップは診断対象として扱います。
 
 味覚レベル、焙煎度、タグは商品名・説明文・Squareカテゴリから初期推定します。
 
@@ -168,9 +174,15 @@ python3 crawler/normalize_products.py
 - `sweetness_level`: 1から5で推定
 - `bitter_level`: 1から5で推定
 - `decaf`: 商品名、説明、タグから推定
+- `seasonal`: 季節限定、さくらブレンド、アイスブレンドなどを推定
+- `priority`: お店側のおすすめ優先度
+- `workshop`: ワークショップ商品かを推定
+- `subscription`: 定期便商品かを推定
+- `sales_rank`: 売れ筋順位。未確認は`null`
+- `sales_score`: 売れ筋順位から0から100で初期換算
 - `recommend_enabled`: 診断対象商品は`true`、対象外商品は`false`
 
-未レビュー項目は`todo`配列に残ります。公開前に人が確認し、味覚レベル、焙煎度、タグを整えてください。
+未レビュー項目は`todo`配列に残ります。公開前に人が確認し、味覚レベル、焙煎度、タグ、実売ベースの売れ筋順位を整えてください。
 
 ## GitHub更新方法
 

@@ -51,6 +51,11 @@ def normalize_product(raw: dict[str, Any]) -> dict[str, Any]:
     category = raw_category if raw_category and is_product_category(raw_category) else infer_category(name, tags)
     available = raw.get("available")
     recommend_enabled = is_diagnosis_target(name, description)
+    workshop = infer_workshop(name, description)
+    subscription = infer_subscription(name, description)
+    seasonal = infer_seasonal(name, description, tags)
+    sales_rank = infer_sales_rank(name)
+    sales_score = infer_sales_score(sales_rank)
 
     return {
         "id": make_product_id(name),
@@ -61,6 +66,12 @@ def normalize_product(raw: dict[str, Any]) -> dict[str, Any]:
         "price": raw.get("price"),
         "image_url": raw.get("image_url") or "",
         "square_url": raw.get("product_url") or raw.get("square_url") or "",
+        "seasonal": seasonal,
+        "priority": infer_priority(name, description, tags, seasonal, workshop, subscription),
+        "workshop": workshop,
+        "subscription": subscription,
+        "sales_rank": sales_rank,
+        "sales_score": sales_score,
         "flavor_tags": tags,
         "acid_level": infer_level("acid", name, description, tags),
         "body_level": infer_level("body", name, description, tags),
@@ -70,9 +81,7 @@ def normalize_product(raw: dict[str, Any]) -> dict[str, Any]:
         "decaf": infer_decaf(name, description, tags),
         "recommend_enabled": recommend_enabled,
         "available": True if available is None else bool(available),
-        "todo": [
-            "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
-        ],
+        "todo": build_todos(sales_rank),
     }
 
 
@@ -108,6 +117,10 @@ def infer_category(name: str, tags: list[str]) -> str:
         return "デカフェ"
     if "ブレンド" in text or "BLEND" in text.upper():
         return "ブレンド"
+    if "ワークショップ" in text:
+        return "ワークショップ"
+    if "定期便" in text:
+        return "定期便"
     if "ギフト" in text:
         return "ギフト"
     if "ドリップバッグ" in text:
@@ -118,7 +131,7 @@ def infer_category(name: str, tags: list[str]) -> str:
 def is_product_category(category: str) -> bool:
     """Return whether a Square category is already a product category."""
 
-    return category in {"シングルオリジン", "ブレンド", "デカフェ", "ギフト", "ドリップバッグ"}
+    return category in {"シングルオリジン", "ブレンド", "デカフェ", "ギフト", "ドリップバッグ", "ワークショップ", "定期便"}
 
 
 def infer_roast(name: str, description: str, tags: list[str]) -> str:
@@ -127,8 +140,20 @@ def infer_roast(name: str, description: str, tags: list[str]) -> str:
     name_text = name.upper()
     tag_text = " ".join(tags)
 
-    if any(word in name_text for word in ["DEEP", "BITTER"]) or "深煎" in name:
+    if "ITALIAN" in name_text:
+        return "Italian"
+    if "FRENCH" in name_text or any(word in name_text for word in ["DEEP", "BITTER"]) or "深煎" in name:
         return "French"
+    if "FULLCITY" in name_text or "FULL CITY" in name_text:
+        return "Full City"
+    if "CITY" in name_text:
+        return "City"
+    if "HIGH" in name_text:
+        return "High"
+    if "CINNAMON" in name_text:
+        return "Cinnamon"
+    if "LIGHT" in name_text:
+        return "Light"
     if "アイス" in name and any(word in name_text for word in ["RICH", "SWEET"]):
         return "Full City"
     if "アイス" in name:
@@ -147,6 +172,92 @@ def infer_decaf(name: str, description: str, tags: list[str]) -> bool:
 
     text = " ".join([name, description, *tags]).lower()
     return "デカフェ" in text or "decaf" in text or "カフェインレス" in text
+
+
+def infer_workshop(name: str, description: str) -> bool:
+    """Infer whether the product is a workshop."""
+
+    return "ワークショップ" in f"{name} {description}"
+
+
+def infer_subscription(name: str, description: str) -> bool:
+    """Infer whether the product is a subscription."""
+
+    text = f"{name} {description}"
+    return "定期便" in text or "サブスク" in text or "subscription" in text.lower()
+
+
+def infer_seasonal(name: str, description: str, tags: list[str]) -> bool:
+    """Infer seasonal products."""
+
+    text = " ".join([name, description, *tags])
+    seasonal_words = [
+        "Sakura",
+        "さくら",
+        "桜",
+        "アイスブレンド",
+        "ICE BLEND",
+        "ニューイヤー",
+        "秋",
+        "雨の日",
+        "ノエル",
+        "クリスマス",
+    ]
+    return any(word.lower() in text.lower() for word in seasonal_words)
+
+
+def infer_priority(name: str, description: str, tags: list[str], seasonal: bool, workshop: bool, subscription: bool) -> int:
+    """Infer initial shop-controlled recommendation priority."""
+
+    text = " ".join([name, description, *tags])
+    priority = 100
+    if "ブラジル" in text or "ホンジュラス SHG" in text:
+        priority += 35
+    if "ドリップバッグ" in text:
+        priority += 15
+    if seasonal:
+        priority += 10
+    if workshop or subscription:
+        priority += 5
+    if "⭐️個性派・スペシャル" in tags:
+        priority += 8
+    return priority
+
+
+def infer_sales_rank(name: str) -> int | None:
+    """Provide a reviewable initial sales rank until Square sales data is connected."""
+
+    ranking = [
+        "ブラジル",
+        "ホンジュラス SHG",
+        "さじまブレンド",
+        "エチオピア",
+        "ドリップバッグアソートBOX：３種",
+        "ドリップバッグアソートBOX：４種",
+        "ドリップバッグアソートBOX：６種",
+        "ドリップバッグアソートBOX：２種",
+    ]
+    for index, keyword in enumerate(ranking, start=1):
+        if keyword in name:
+            return index
+    return None
+
+
+def infer_sales_score(sales_rank: int | None) -> int:
+    """Convert a sales rank into a 0-100 score."""
+
+    if sales_rank is None:
+        return 0
+    return max(0, 105 - sales_rank * 5)
+
+
+def build_todos(sales_rank: int | None) -> list[str]:
+    """Build review notes for generated product data."""
+
+    todos = ["TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"]
+    if sales_rank is None:
+        todos.append("TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。")
+    return todos
 
 
 def infer_flavor_tags(name: str, description: str, raw_tags: list[str]) -> list[str]:
@@ -217,7 +328,7 @@ def is_diagnosis_target(name: str, description: str) -> bool:
     """Return whether a product should be included in bean recommendations."""
 
     text = f"{name} {description}"
-    excluded = ["ワークショップ", "送料", "ギフトボックス"]
+    excluded = ["送料", "ギフトボックス"]
     return not any(word in text for word in excluded)
 
 

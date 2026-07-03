@@ -9,6 +9,12 @@
       "price": 880,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/Q5AWZ36A4SS7VOQPDDZS6NCY.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/tanzania/21",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🌿スッキリ・シャープ",
         "すっきり",
@@ -32,7 +38,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -44,6 +51,12 @@
       "price": 1280,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/COMTFHTVHWTAUH6PIJBC4T4R.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-q-/22",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 4,
+      "sales_score": 85,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -77,6 +90,12 @@
       "price": 930,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/MPAYC3GJQNCT6P6TTM7YEXYH.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-3/31",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 3,
+      "sales_score": 90,
       "flavor_tags": [
         "コク",
         "甘み",
@@ -111,6 +130,12 @@
       "price": 940,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/FQNOBSCR7C5RYG4EVXE7DOQA.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-shg-q-/32",
+      "seasonal": false,
+      "priority": 135,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 2,
+      "sales_score": 95,
       "flavor_tags": [
         "☕️バランス・マイルド",
         "すっきり",
@@ -148,6 +173,12 @@
       "price": 880,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/QW2AE4FJLSEP6SWZGOQDXOAT.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/2025-sakura-blend/33",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -168,7 +199,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -180,6 +212,12 @@
       "price": 880,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/JFRUGDWZGB766IF7QXQHPG3C.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/34",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -204,7 +242,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -216,6 +255,12 @@
       "price": 970,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/KF7SZ3CKWEPIBNJBHEYAL7HP.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-2-flesh-sharp/36",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🌿スッキリ・シャープ",
         "すっきり",
@@ -239,7 +284,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -251,6 +297,12 @@
       "price": 970,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/FN7XOVI7SSOHWWL2DJ3BHDNZ.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-5-bitter-sweet/37",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🥃アイスコーヒー",
         "すっきり",
@@ -277,7 +329,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -289,6 +342,12 @@
       "price": 970,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/WDRYE7ZADYENA63WSCIRHVMU.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-1-rich-sweet/38",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🥃アイスコーヒー",
         "すっきり",
@@ -312,7 +371,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -324,6 +384,12 @@
       "price": 840,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/7GE3NW5Q537YMMLRIPDFKLGD.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/papuanewguinea/39",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -346,7 +412,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -358,6 +425,12 @@
       "price": 870,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/HA54FWOLBQSKACDSNDIPYZR5.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/40",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "コク",
@@ -381,7 +454,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -393,6 +467,12 @@
       "price": 970,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/IEKXGMR2MBYYWNI7GRG5YF3O.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-3-deep-bitter/41",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🥃アイスコーヒー",
         "すっきり",
@@ -418,7 +498,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -430,6 +511,12 @@
       "price": 970,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/V7RETRIK7XSDIXQKJSMQUORN.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/4SCMDPBDEDY2HGERQA2QWHZM",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "☕️バランス・マイルド",
         "すっきり",
@@ -455,7 +542,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -467,6 +555,12 @@
       "price": 3600,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/WVRBPYLCTB2TBIORVNCFD6M5.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-box-/5NJ7MXCDWR6BY3QED3WFFO3V",
+      "seasonal": false,
+      "priority": 115,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 5,
+      "sales_score": 80,
       "flavor_tags": [
         "🎁ドリップバッグアソートBOX"
       ],
@@ -495,6 +589,12 @@
       "price": 830,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/P4XY4XPCW4HBKF3IOWZVWPTL.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-80-/5XKMNPPDSIPZILE7SWFYX2RR",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "送料"
       ],
@@ -511,7 +611,8 @@
       "recommend_enabled": false,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -523,6 +624,12 @@
       "price": 980,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/X7LG5TIA7FMBXDYAB5LUZT4K.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-q-/7DCXLZSKDWFC23XTRMLOFNXA",
+      "seasonal": false,
+      "priority": 108,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "⭐️個性派・スペシャル",
         "すっきり",
@@ -542,7 +649,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -554,6 +662,12 @@
       "price": 7200,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/P4XY4XPCW4HBKF3IOWZVWPTL.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-box-/7SG4J37BF7QGFFV2S6TFETZ4",
+      "seasonal": false,
+      "priority": 115,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 7,
+      "sales_score": 70,
       "flavor_tags": [
         "🎁ドリップバッグアソートBOX"
       ],
@@ -582,6 +696,12 @@
       "price": 1150,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/6575Q6RIJ6MPUVHNZL27ZRAR.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/costarica/8",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -608,7 +728,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -620,6 +741,12 @@
       "price": 930,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/BZTJCVYIOF22JSMV7EWYZ3JF.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/AFHDFMPOQWHXGJAVTEHQDKXB",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -642,7 +769,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -654,6 +782,12 @@
       "price": 2400,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/H2JUKGTLTHBRHFW5UU4K3W7G.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-box-/AFHVNNQ2ECK4W5DHCQRPBOF3",
+      "seasonal": false,
+      "priority": 115,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 8,
+      "sales_score": 65,
       "flavor_tags": [
         "🎁ドリップバッグアソートBOX"
       ],
@@ -676,12 +810,18 @@
     {
       "id": "product_28e9b42b9b",
       "name": "焙煎士おまかせ定期便｜送料無料",
-      "category": "シングルオリジン",
+      "category": "定期便",
       "roast": "Medium",
       "description": "ご指定の頻度で、なぎさ珈琲焙煎所から焙煎したてのコーヒーをお届けします。 その時期におすすめしたい豆や、気分に寄り添うブレンドを、焙煎士がセレクト。 自分では選ばないコーヒーに出会える、ちょっと楽しみな定期便です。 季節の移ろいや入荷状況に合わせて、毎回違った味わいをお楽しみいただけます。 タイミングによっては、通常販売していない豆やブレンドをお届けすることもあります。 【お届け内容】 1種類コース・2種類コース・3種類コースからお選びいただけます。 【お届け頻度】 毎週・2週ごと・毎月からお選びいただけます。 ご指定の頻度に合わせて、定期的にお届けします。 【発送について】 お届けは発送のみとなります。店舗受取はできません。 定期便の送料は無料です。 発送日は、原則として木曜日です。 お申し込みのタイミングにより、初回発送日は次回以降の木曜日となる場合があります。 【内容について】 お届けする豆の種類・焙煎度は、焙煎士におまかせとなります。 豆の状態は「豆のまま」または「粉」からお選びいただけます。 味わいの好みは「おまかせ・すっきり軽やか・ほどよくバランス・コク深め」からお選びいただけます。 迷ったら「おまかせ」がおすすめです。 【一時停止・解約について】 継続回数の縛りはありません。 一時停止・解約はいつでも可能です。 一時停止は、選択されたお届け頻度に応じて最大3回分まで可能です。 発送準備に入ったご注文分は、次回以降のお届け分からの反映となる場合があります。 【ご注意】 こちらは定期便商品です。通常の単品購入ではなく、ご指定の頻度で自動的にお届けするサブスクリプション商品です。",
       "price": 1200,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/BICGDSLLZOM6Y44LE6M6U425.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/C4OTOHI5TIRQAH74D5CLJAEO",
+      "seasonal": false,
+      "priority": 105,
+      "workshop": false,
+      "subscription": true,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🏣なぎさのコーヒー定期便",
         "すっきり",
@@ -699,7 +839,8 @@
       "recommend_enabled": false,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -711,6 +852,12 @@
       "price": 1220,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/5AUSVZJPII6NUI2O4EWNGCTT.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/COG2ALHDLBWSNBY4GM46JGLG",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🫘コク・ビター系",
         "コク",
@@ -733,18 +880,25 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
       "id": "7_5_sun_am_intermediate_7871688152",
       "name": "【7/5 (SUN) AM】なぎさ珈琲焙煎所　ハンドドリップワークショップ INTERMEDIATE（定員３名）",
-      "category": "シングルオリジン",
+      "category": "ワークショップ",
       "roast": "Full City",
       "description": "少人数制（1〜3名）のハンドドリップワークショップ INTERMEDIATE（実践編）です。 参加人数分をお申し込みください。 BASICで学ぶ「おいしく淹れるための基本」から一歩進んで、 味の違いを感じ取り、自分好みに調整する考え方を学びます。 同じ豆でも、挽き目・湯温・粉量・注ぎ方・抽出時間によって、 酸味、苦味、甘さ、濃さ、後味の印象は変わります。 この講座では、基準の一杯を淹れたうえで、 挽き目や注ぎ方を変えながら飲み比べ、 「どこがどう変わったか」を言葉にしていきます。 完璧なレシピを覚えるのではなく、 味がズレた時に、どこをどう調整すればよいかを考えられるようになる実践編です。 BASICを受講していない方でもご参加いただけますが、 ハンドドリップの基本の流れを知っている方に特におすすめです。 ・所要時間：約90分 ・参加人数：1〜3名 ・お持ち帰り用焙煎豆100g付き ・ご自宅で使える味の調整チャート付き ・使用器具はこちらでご用意します",
       "price": 3800,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/BNOMXPMJVR2UNB347MB4Y3MW.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-7-5-sun-am-intermediate-/D2HCI3EBJBF2B2XFD73YN26O",
+      "seasonal": false,
+      "priority": 105,
+      "workshop": true,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🫖ワークショップ",
         "甘み",
@@ -759,10 +913,11 @@
         "自宅"
       ],
       "decaf": false,
-      "recommend_enabled": false,
+      "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -774,6 +929,12 @@
       "price": 930,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/UCFEOKZBZVSCBNBCJR472RUG.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/2026-/EPPVYS7X6FMTHM3W73U4CWPE",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -797,7 +958,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -809,6 +971,12 @@
       "price": 4800,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/VDMQFZY3EVSMWMZ24BGO6EEL.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-box-/EYOOST4GVKY2CJL7CH735GF4",
+      "seasonal": false,
+      "priority": 115,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 6,
+      "sales_score": 75,
       "flavor_tags": [
         "🎁ドリップバッグアソートBOX"
       ],
@@ -831,12 +999,18 @@
     {
       "id": "7_11_sat_am_intermediate_cfd4385a7e",
       "name": "【7/11 (SAT) AM】なぎさ珈琲焙煎所　ハンドドリップワークショップ INTERMEDIATE（定員３名）のコピーのコピー",
-      "category": "シングルオリジン",
+      "category": "ワークショップ",
       "roast": "Full City",
       "description": "少人数制（1〜3名）のハンドドリップワークショップ INTERMEDIATE（実践編）です。 参加人数分をお申し込みください。 BASICで学ぶ「おいしく淹れるための基本」から一歩進んで、 味の違いを感じ取り、自分好みに調整する考え方を学びます。 同じ豆でも、挽き目・湯温・粉量・注ぎ方・抽出時間によって、 酸味、苦味、甘さ、濃さ、後味の印象は変わります。 この講座では、基準の一杯を淹れたうえで、 挽き目や注ぎ方を変えながら飲み比べ、 「どこがどう変わったか」を言葉にしていきます。 完璧なレシピを覚えるのではなく、 味がズレた時に、どこをどう調整すればよいかを考えられるようになる実践編です。 BASICを受講していない方でもご参加いただけますが、 ハンドドリップの基本の流れを知っている方に特におすすめです。 ・所要時間：約90分 ・参加人数：1〜3名 ・お持ち帰り用焙煎豆100g付き ・ご自宅で使える味の調整チャート付き ・使用器具はこちらでご用意します",
       "price": 3800,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/BNOMXPMJVR2UNB347MB4Y3MW.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-7-11-sat-am-intermediate-/FZ6EOKFVEK6QJNCLGP7XNQW5",
+      "seasonal": false,
+      "priority": 105,
+      "workshop": true,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🫖ワークショップ",
         "甘み",
@@ -851,21 +1025,28 @@
         "自宅"
       ],
       "decaf": false,
-      "recommend_enabled": false,
+      "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
       "id": "7_5_sun_pm_basic_66c3022d70",
       "name": "【7/5 (SUN) PM】なぎさ珈琲焙煎所　ハンドドリップワークショップ BASIC（定員３名）",
-      "category": "シングルオリジン",
+      "category": "ワークショップ",
       "roast": "City",
       "description": "少人数制（1〜3名）のハンドドリップワークショップ BASICです。 豆の違いや、お湯の注ぎ方による味の変化を体験しながら、 “自分の好きな味”を見つけていきます。 初心者の方、おひとり参加も歓迎です。 ・所要時間：約90分 ・珈琲豆100g付き（お持ち帰りいただく豆のお好み焙煎度をお選びください。） ・使用器具はこちらでご用意します",
       "price": 2800,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/PN7BOY5ZFW6PSQ2OFE6Z4H3E.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-7-5-sun-pm-basic-/HNQBWUALWEEWSVBH3ADOSJOI",
+      "seasonal": false,
+      "priority": 105,
+      "workshop": true,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🫖ワークショップ"
       ],
@@ -878,10 +1059,11 @@
         "自宅"
       ],
       "decaf": false,
-      "recommend_enabled": false,
+      "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -893,6 +1075,12 @@
       "price": 840,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/2CPZ6NQH723NGHSRFLQVKTNG.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/IDZVHZRLDTM2HFHT3J7AKG4O",
+      "seasonal": false,
+      "priority": 108,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "⭐️個性派・スペシャル",
         "すっきり",
@@ -914,7 +1102,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -926,6 +1115,12 @@
       "price": 770,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/TEOAP4XKGYXVDMY7UJNXTUBD.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/7-serendipity-blend-/IZVEAYU4PVVPY2RG6GQNOQJK",
+      "seasonal": false,
+      "priority": 108,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "⭐️個性派・スペシャル"
       ],
@@ -941,7 +1136,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -953,6 +1149,12 @@
       "price": 1300,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/XKWYCFUDC3BFZGXIV77UDPHL.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-70/JB2WNBNT77L6KYVOIZEH5JXH",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🏣なぎさのコーヒー定期便",
         "コク",
@@ -973,7 +1175,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -985,6 +1188,12 @@
       "price": 1150,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/EUAN3AQHSCZEJCVZNLIQBAQA.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/JLFFQAQH2A7PMOL6UAASUJXC",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 4,
+      "sales_score": 85,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -1018,6 +1227,12 @@
       "price": 880,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/INOLBQMLPTLSTABESV3LNBYA.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/rwanda/MLPQGEHZVFDWPWM2ANHZENBE",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -1037,18 +1252,25 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
       "id": "7_11_sat_am_intermediate_5736890af4",
       "name": "【7/11 (SAT) AM】なぎさ珈琲焙煎所　ハンドドリップワークショップ INTERMEDIATE（定員３名）",
-      "category": "シングルオリジン",
+      "category": "ワークショップ",
       "roast": "Full City",
       "description": "少人数制（1〜3名）のハンドドリップワークショップ INTERMEDIATE（実践編）です。 参加人数分をお申し込みください。 BASICで学ぶ「おいしく淹れるための基本」から一歩進んで、 味の違いを感じ取り、自分好みに調整する考え方を学びます。 同じ豆でも、挽き目・湯温・粉量・注ぎ方・抽出時間によって、 酸味、苦味、甘さ、濃さ、後味の印象は変わります。 この講座では、基準の一杯を淹れたうえで、 挽き目や注ぎ方を変えながら飲み比べ、 「どこがどう変わったか」を言葉にしていきます。 完璧なレシピを覚えるのではなく、 味がズレた時に、どこをどう調整すればよいかを考えられるようになる実践編です。 BASICを受講していない方でもご参加いただけますが、 ハンドドリップの基本の流れを知っている方に特におすすめです。 ・所要時間：約90分 ・参加人数：1〜3名 ・お持ち帰り用焙煎豆100g付き ・ご自宅で使える味の調整チャート付き ・使用器具はこちらでご用意します",
       "price": 3800,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/BNOMXPMJVR2UNB347MB4Y3MW.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-7-11-sat-am-intermediate-/PLRFHOTV3PDT65HLAH3MQ4KH",
+      "seasonal": false,
+      "priority": 105,
+      "workshop": true,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🫖ワークショップ",
         "甘み",
@@ -1063,10 +1285,11 @@
         "自宅"
       ],
       "decaf": false,
-      "recommend_enabled": false,
+      "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -1078,6 +1301,12 @@
       "price": 930,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/NYZQOQE5BEI7YF3DJWAYLH3V.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-/SW5TPC5QYVZQNZSOJBUCV4XO",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "☕️バランス・マイルド",
         "コク",
@@ -1099,7 +1328,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -1111,6 +1341,12 @@
       "price": 1280,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/CIQH6LQBRL6JPW6D3A7SAJF5.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-q-/TLH34BDPRQRV6UUFOQYC2PLE",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 4,
+      "sales_score": 85,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -1146,6 +1382,12 @@
       "price": 590,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/VNJGMUDYUCKRWLYA34FA55YR.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-60-/TRPOZWGY2HWARG4DHDXYXDJX",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "送料"
       ],
@@ -1162,7 +1404,8 @@
       "recommend_enabled": false,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -1174,6 +1417,12 @@
       "price": 1240,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/EUAN3AQHSCZEJCVZNLIQBAQA.jpeg?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-jas-/U4SGTUGDJIG6LYL3IEBPJBEY",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🩵デカフェ",
         "すっきり",
@@ -1195,18 +1444,25 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
       "id": "7_12_sun_pm_basic_736cdecaa7",
       "name": "【7/12 (SUN) PM】なぎさ珈琲焙煎所　ハンドドリップワークショップ BASIC（定員３名）",
-      "category": "シングルオリジン",
+      "category": "ワークショップ",
       "roast": "City",
       "description": "少人数制（1〜3名）のハンドドリップワークショップ BASICです。 豆の違いや、お湯の注ぎ方による味の変化を体験しながら、 “自分の好きな味”を見つけていきます。 初心者の方、おひとり参加も歓迎です。 ・所要時間：約90分 ・珈琲豆100g付き（お持ち帰りいただく豆のお好み焙煎度をお選びください。） ・使用器具はこちらでご用意します",
       "price": 2800,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/PN7BOY5ZFW6PSQ2OFE6Z4H3E.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-7-12-sun-pm-basic-/V3INVUI4YYTD2YMG3X5PD6EF",
+      "seasonal": false,
+      "priority": 105,
+      "workshop": true,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🫖ワークショップ"
       ],
@@ -1219,10 +1475,11 @@
         "自宅"
       ],
       "decaf": false,
-      "recommend_enabled": false,
+      "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -1234,6 +1491,12 @@
       "price": 990,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/TQCLKFUEFZRG5DXKM2EMRMZD.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-no-2-/VCWD24O4HPMD37CIAJ5WUPS5",
+      "seasonal": false,
+      "priority": 135,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": 1,
+      "sales_score": 100,
       "flavor_tags": [
         "☕️バランス・マイルド",
         "すっきり",
@@ -1269,6 +1532,12 @@
       "price": 1300,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/WVXBEOKRWTH557SYGNJPNJCW.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-50/XQE3NAHZGTAFDLKBVM5C3WGA",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🏣なぎさのコーヒー定期便",
         "コク",
@@ -1288,7 +1557,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -1300,6 +1570,12 @@
       "price": 1300,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/OVCKOPFEMZM4E32SF4TKZ5M3.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-30/YBYNGBRZNVRXRO3S7CL2KTRI",
+      "seasonal": false,
+      "priority": 100,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🏣なぎさのコーヒー定期便",
         "すっきり",
@@ -1318,18 +1594,25 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
       "id": "7_12_sun_am_intermediate_bf8e020ae7",
       "name": "【7/12 (SUN) AM】なぎさ珈琲焙煎所　ハンドドリップワークショップ INTERMEDIATE（定員３名）のコピー",
-      "category": "シングルオリジン",
+      "category": "ワークショップ",
       "roast": "Full City",
       "description": "少人数制（1〜3名）のハンドドリップワークショップ INTERMEDIATE（実践編）です。 参加人数分をお申し込みください。 BASICで学ぶ「おいしく淹れるための基本」から一歩進んで、 味の違いを感じ取り、自分好みに調整する考え方を学びます。 同じ豆でも、挽き目・湯温・粉量・注ぎ方・抽出時間によって、 酸味、苦味、甘さ、濃さ、後味の印象は変わります。 この講座では、基準の一杯を淹れたうえで、 挽き目や注ぎ方を変えながら飲み比べ、 「どこがどう変わったか」を言葉にしていきます。 完璧なレシピを覚えるのではなく、 味がズレた時に、どこをどう調整すればよいかを考えられるようになる実践編です。 BASICを受講していない方でもご参加いただけますが、 ハンドドリップの基本の流れを知っている方に特におすすめです。 ・所要時間：約90分 ・参加人数：1〜3名 ・お持ち帰り用焙煎豆100g付き ・ご自宅で使える味の調整チャート付き ・使用器具はこちらでご用意します",
       "price": 3800,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/BNOMXPMJVR2UNB347MB4Y3MW.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-7-12-sun-am-intermediate-/ZJE6XM6IVJTZHABYSQ3Q44JN",
+      "seasonal": false,
+      "priority": 105,
+      "workshop": true,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🫖ワークショップ",
         "甘み",
@@ -1344,10 +1627,11 @@
         "自宅"
       ],
       "decaf": false,
-      "recommend_enabled": false,
+      "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     },
     {
@@ -1359,6 +1643,12 @@
       "price": 970,
       "image_url": "https://150737191.cdn6.editmysite.com/uploads/1/5/0/7/150737191/BP4AFQNG7D3CBERW4CQBLT6J.png?width=1280",
       "square_url": "https://www.nagisa-coffee.jp/product/-4-fruity-sweet/ZTBCEIFO3L3POXACPN6W4ERY",
+      "seasonal": true,
+      "priority": 110,
+      "workshop": false,
+      "subscription": false,
+      "sales_rank": null,
+      "sales_score": 0,
       "flavor_tags": [
         "🍊フルーティ・華やか",
         "すっきり",
@@ -1378,7 +1668,8 @@
       "recommend_enabled": true,
       "available": true,
       "todo": [
-        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。"
+        "TODO: 診断公開前に味覚レベル、焙煎度、タグを人が確認してください。",
+        "TODO: Squareオンラインと実店舗を合算したsales_rank/sales_scoreを確認してください。"
       ]
     }
   ]

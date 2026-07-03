@@ -20,6 +20,11 @@ REQUIRED_FIELDS = {
     "price": int,
     "image_url": str,
     "square_url": str,
+    "seasonal": bool,
+    "priority": int,
+    "workshop": bool,
+    "subscription": bool,
+    "sales_score": int,
     "flavor_tags": list,
     "acid_level": int,
     "body_level": int,
@@ -31,7 +36,7 @@ REQUIRED_FIELDS = {
     "available": bool,
 }
 LEVEL_FIELDS = ["acid_level", "body_level", "sweetness_level", "bitter_level"]
-ROASTS = {"Light", "Medium", "High", "City", "Full City", "French", "Italian"}
+ROASTS = {"Light", "Cinnamon", "Medium", "High", "City", "Full City", "French", "Italian"}
 
 
 def main() -> int:
@@ -86,6 +91,14 @@ def validate_products(path: Path) -> list[str]:
 
         if isinstance(product.get("price"), int) and product["price"] < 0:
             errors.append(f"{product_label}: price must be 0 or greater.")
+        if isinstance(product.get("priority"), int) and product["priority"] < 0:
+            errors.append(f"{product_label}: priority must be 0 or greater.")
+        if isinstance(product.get("sales_score"), int) and not 0 <= product["sales_score"] <= 100:
+            errors.append(f"{product_label}: sales_score must be from 0 to 100.")
+        if product.get("sales_rank") is not None and not isinstance(product.get("sales_rank"), int):
+            errors.append(f"{product_label}: sales_rank must be an integer or null.")
+        if isinstance(product.get("sales_rank"), int) and product["sales_rank"] < 1:
+            errors.append(f"{product_label}: sales_rank must be 1 or greater.")
 
         if product.get("recommend_enabled") and product.get("available"):
             recommendable_count += 1
@@ -96,6 +109,10 @@ def validate_products(path: Path) -> list[str]:
                 errors.append(f"{product_label}: drip bag products must be recommend_enabled=true.")
             if "ドリップバッグ" not in product.get("recommended_for", []):
                 errors.append(f"{product_label}: drip bag products must include recommended_for 'ドリップバッグ'.")
+        if "ワークショップ" in str(product.get("name", "")) and product.get("workshop") is not True:
+            errors.append(f"{product_label}: workshop products must have workshop=true.")
+        if "定期便" in str(product.get("name", "")) and product.get("subscription") is not True:
+            errors.append(f"{product_label}: subscription products must have subscription=true.")
 
     if not products:
         errors.append("products must contain at least one item.")

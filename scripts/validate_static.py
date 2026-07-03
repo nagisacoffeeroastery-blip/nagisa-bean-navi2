@@ -41,6 +41,8 @@ def validate_index(path: Path) -> list[str]:
         'id="quiz-panel"',
         'id="result-list"',
         'id="error-panel"',
+        'assets/images/nagisa_logo_black_transparent.png',
+        "豆なび",
     ]
     for snippet in required_snippets:
         if snippet not in content:
@@ -76,7 +78,8 @@ def validate_app(path: Path) -> list[str]:
         "function scoreProduct(",
         "function recommendProducts(",
         "function getRecommendableProducts(",
-        "探しているのはドリップバッグですか？",
+        "なにをお探しですか？",
+        "8: ITALIAN ROAST",
     ]
     for snippet in required_snippets:
         if snippet not in content:

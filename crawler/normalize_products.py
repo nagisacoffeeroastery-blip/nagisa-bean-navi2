@@ -140,6 +140,11 @@ def infer_roast(name: str, description: str, tags: list[str]) -> str:
     name_text = name.upper()
     tag_text = " ".join(tags)
 
+    if "シャキッソ" in name or "イルガチェフェ コチャレ Qグレード（ウォッシュト）" in name:
+        return "Cinnamon"
+    if "コチャレ（ナチュラル）" in name or "ジャガーハニー" in name:
+        return "Light"
+
     if "ITALIAN" in name_text:
         return "Italian"
     if "FRENCH" in name_text or any(word in name_text for word in ["DEEP", "BITTER"]) or "深煎" in name:
@@ -153,6 +158,10 @@ def infer_roast(name: str, description: str, tags: list[str]) -> str:
     if "CINNAMON" in name_text:
         return "Cinnamon"
     if "LIGHT" in name_text:
+        return "Light"
+    if "浅煎り】 CINNAMON ROAST" in description or "シナモン〜ライトロースト" in description:
+        return "Cinnamon"
+    if "■ ライトロースト" in description or "【浅煎り】 LIGHT ROAST" in description:
         return "Light"
     if "アイス" in name and any(word in name_text for word in ["RICH", "SWEET"]):
         return "Full City"

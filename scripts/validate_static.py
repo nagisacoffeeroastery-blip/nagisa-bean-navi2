@@ -79,6 +79,9 @@ def validate_app(path: Path) -> list[str]:
         "function recommendProducts(",
         "function getRecommendableProducts(",
         "なにをお探しですか？",
+        "浅煎り",
+        "中深煎り",
+        "roastGroups",
         "8: ITALIAN ROAST",
     ]
     for snippet in required_snippets:

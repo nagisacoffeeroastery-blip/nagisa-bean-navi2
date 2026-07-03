@@ -145,7 +145,14 @@ https://github.com/nagisacoffeeroastery-blip/nagisa-bean-navi2
 
 質問文や選択肢は`questions`配列で管理しています。
 
-現在は1問目の「なにをお探しですか？」で、コーヒー豆、ドリップバッグ、定期便、ワークショップを分岐します。焙煎度はLIGHT ROASTからITALIAN ROASTまでの8段階で選択できます。
+現在は1問目の「なにをお探しですか？」で、コーヒー豆、ドリップバッグ、定期便、ワークショップを分岐します。焙煎度は画面上では「おまかせ、浅煎り、中煎り、中深煎り、深煎り」から選び、内部では以下の8段階へ対応させています。
+
+- 浅煎り: `1: LIGHT ROAST` / `2: CINNAMON ROAST`
+- 中煎り: `3: MEDIUM ROAST` / `4: HIGH ROAST`
+- 中深煎り: `5: CITY ROAST` / `6: FULLCITY ROAST`
+- 深煎り: `7: FRENCH ROAST` / `8: ITALIAN ROAST`
+
+結果カードには、商品ごとのおすすめ焙煎度を8段階表記で表示します。
 
 ## クローラー実行方法
 

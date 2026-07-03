@@ -40,17 +40,7 @@ const questions = [
   {
     id: "roast",
     title: "焙煎度",
-    answers: [
-      "おまかせ",
-      "1: LIGHT ROAST",
-      "2: CINNAMON ROAST",
-      "3: MEDIUM ROAST",
-      "4: HIGH ROAST",
-      "5: CITY ROAST",
-      "6: FULLCITY ROAST",
-      "7: FRENCH ROAST",
-      "8: ITALIAN ROAST",
-    ],
+    answers: ["おまかせ", "浅煎り", "中煎り", "中深煎り", "深煎り"],
   },
 ];
 
@@ -74,6 +64,13 @@ const roastLevels = new Map([
   ["Full City", 6],
   ["French", 7],
   ["Italian", 8],
+]);
+
+const roastGroups = new Map([
+  ["浅煎り", [1, 2]],
+  ["中煎り", [3, 4]],
+  ["中深煎り", [5, 6]],
+  ["深煎り", [7, 8]],
 ]);
 
 const state = {
@@ -249,7 +246,7 @@ function scoreProduct(product, answers) {
   }
 
   if (answers.roast !== "おまかせ") {
-    score += roastMatches(product.roast, answers.roast) ? 8 : 0;
+    score += roastMatches(product.roast, answers.roast) ? 10 : 0;
   } else {
     score += 2;
   }
@@ -275,13 +272,28 @@ function scoreProduct(product, answers) {
  * @returns {Array<object>}
  */
 function recommendProducts(products, answers) {
-  return getRecommendableProducts(products)
+  return getEligibleProducts(getRecommendableProducts(products), answers)
     .map((product) => {
       const result = scoreProduct(product, answers);
       return { ...product, score: result.score, reasons: result.reasons };
     })
     .sort(compareProducts)
     .slice(0, MAX_RESULTS);
+}
+
+/**
+ * Narrows products to the roast family selected by the user.
+ * @param {Array<object>} products
+ * @param {Record<string, string>} answers
+ * @returns {Array<object>}
+ */
+function getEligibleProducts(products, answers) {
+  if (!answers.roast || answers.roast === "おまかせ") {
+    return products;
+  }
+
+  const roastMatchedProducts = products.filter((product) => roastMatches(product.roast, answers.roast));
+  return roastMatchedProducts.length > 0 ? roastMatchedProducts : products;
 }
 
 /**
@@ -390,15 +402,14 @@ function isDarkRoast(roast) {
 }
 
 /**
- * Checks whether a product roast matches the answer label.
+ * Checks whether a product roast matches the selected roast family.
  * @param {string} roast
  * @param {string} answer
  * @returns {boolean}
  */
 function roastMatches(roast, answer) {
-  const answerLevel = Number.parseInt(answer, 10);
-  if (!Number.isFinite(answerLevel)) return false;
-  return roastLevel(roast) === answerLevel;
+  const allowedLevels = roastGroups.get(answer);
+  return allowedLevels ? allowedLevels.includes(roastLevel(roast)) : false;
 }
 
 /**
